@@ -1,0 +1,27 @@
+﻿<Window x:Class="DebtCalculator.NewDebtWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DebtCalculator"
+        xmlns:custom="clr-namespace:HamburgerMenuControl;assembly=HamburgerMenuControl" 
+        xmlns:controls="clr-namespace:DebtCalculator.Controls" 
+        mc:Ignorable="d"
+        Title="Add New Account" Height="450" Width="800">
+    <Grid Background="Beige">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:Header x:Name="Header" VerticalAlignment="Top" Height="450"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Center" Margin="0,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="APRTextBox" HorizontalAlignment="Center" Margin="0,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
+        <Label Content="Total Amount Owed" HorizontalAlignment="Left" Margin="333,187,0,0" VerticalAlignment="Top"/>
+        <Label Content="APR" HorizontalAlignment="Left" Margin="333,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.133,0.415"/>
+        <Label Content="Select An Account Type" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.265,0.608"/>
+        <Label Content="Account Name" HorizontalAlignment="Left" Margin="333,133,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="debtTypeComboBox" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="134" Height="18"/>
+        <Button x:Name="addDebtButton" Content="Enter Info" HorizontalAlignment="Left" Margin="631,295,0,0" VerticalAlignment="Top" Height="40" Width="73" Click="addDebtButton_Click"/>
+    </Grid>
+</Window>
