@@ -11,9 +11,14 @@ namespace DebtCalculator
     public class DebtManager
     {
         private List<Debt> debtList = new List<Debt>();
+        private double minimumPayment;
+        private double totalDebt;
 
         //CSV Header:
         //Name,Amount,APR,DebtType
+
+        public double TotalDebt { get { return totalDebt; }}
+        public double MinimumPayment { get { return minimumPayment; } }
 
         public void LoadCSV()
         {
@@ -29,7 +34,11 @@ namespace DebtCalculator
                     var columns = line.Split(',');
                     ///TODO: Impliment Error Checking
                     ///
-                    Debt temp = new Debt(columns[0], double.Parse(columns[1]), float.Parse(columns[2]), int.Parse(columns[3]));
+                    Debt temp = new Debt(columns[0], double.Parse(columns[1]), float.Parse(columns[2]), int.Parse(columns[3]), int.Parse(columns[4]));
+
+                    minimumPayment += temp.MinimumMonthlyPayment;
+                    totalDebt += temp.Amount;
+
                     debtList.Add(temp);
                 }
             }
@@ -45,6 +54,8 @@ namespace DebtCalculator
             
             if (index > -1 && debtList[index] != null)
             {
+                totalDebt -= debtList[index].Amount;
+                minimumPayment-= debtList[index].MinimumMonthlyPayment;
                 debtList.RemoveAt(index);
             } else
             {
@@ -53,7 +64,7 @@ namespace DebtCalculator
 
             using (var writer = new StreamWriter("data.csv"))
             {
-                writer.WriteLine("Name,Amount,APR,DebtType");
+                writer.WriteLine("Name,Amount,APR,DebtType,LoanLength");
                 foreach (Debt debt in DebtList)
                 {
                     writer.WriteLine(debt.ToCSVFormat());
@@ -64,6 +75,8 @@ namespace DebtCalculator
         public void AddDebt(Debt newDebt)
         {
             debtList.Add(newDebt);
+            minimumPayment += newDebt.MinimumMonthlyPayment;
+            totalDebt += newDebt.Amount;
             UpdateCSV(newDebt);
         }
 
@@ -84,7 +97,6 @@ namespace DebtCalculator
                 writer.WriteLine(temp.ToCSVFormat());
             }
         }
-
     }
 
 }

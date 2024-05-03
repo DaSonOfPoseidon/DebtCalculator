@@ -74,24 +74,10 @@ namespace DebtCalculator.Controls
             }
         }
 
-
-
-
-
         //Diagnostic Functions
         public void SetMenuVisibility(bool isVisible)
         {
             MenuControl.IsOpen = isVisible;  // Directly setting the IsOpen property of the HamburgerMenu
-        }
-
-        private void showButton_Click(object sender, RoutedEventArgs e)
-        {
-            SetMenuVisibility(true);  // Example method to control menu visibility
-        }
-
-        private void hideButton_Click(object sender, RoutedEventArgs e)
-        {
-            SetMenuVisibility(false);  // Example method to control menu visibility
         }
     }
 }

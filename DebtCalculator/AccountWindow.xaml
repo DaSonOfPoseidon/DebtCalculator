@@ -9,9 +9,15 @@
         Title="AccountWindow" Height="450" Width="800">
     <Grid Background="Beige">
         <controls:Header x:Name="Header" VerticalAlignment="Top"/>
-        <ListBox x:Name="accountListBox" Margin="118,79,146,44" Background="Transparent" BorderBrush="Transparent"/>
-        <Button x:Name="deleteButton" Content="Delete Entry" HorizontalAlignment="Left" Margin="705,315,0,0" VerticalAlignment="Top" Height="75" Width="77" Click="deleteButton_Click"/>
-        <Label x:Name="TotalInterestLabel" Content="Total Monthly Interest:" HorizontalAlignment="Left" Margin="661,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="totalInterestTextBox" HorizontalAlignment="Left" Margin="665,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.375,-0.217"/>
+        <ListBox x:Name="accountListBox" Margin="118,79,0,0" BorderBrush="Black" SelectionChanged="accountListBox_SelectionChanged" FontSize="14" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="323" Width="468" Background="Transparent"/>
+        <Button x:Name="deleteButton" Content="Delete Entry" HorizontalAlignment="Left" Margin="612,371,0,0" VerticalAlignment="Top" Height="31" Width="167" Click="deleteButton_Click"/>
+        <Label x:Name="TotalInterestLabel" Content="Total Monthly Interest:" HorizontalAlignment="Left" Margin="632,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="totalInterestTextBox" HorizontalAlignment="Left" Margin="636,125,0,0" TextWrapping="Wrap" Text="Test $200.00" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift SemiBold" Grid.Column="2"/>
+        <Label x:Name="TotalInterestLabel_Copy" Content="Total Minimum Payment" HorizontalAlignment="Left" Margin="626,157,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="MinimumPaymentTextBox" HorizontalAlignment="Left" Margin="636,188,0,0" TextWrapping="Wrap" Text="Test $200.00" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift SemiBold"/>
+        <Label x:Name="AccountMonthlyInterestLabel" Content="Total Monthly Interest:" HorizontalAlignment="Left" Margin="632,221,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AccountMonthlyInterestTextBox" HorizontalAlignment="Left" Margin="636,252,0,0" TextWrapping="Wrap" Text="Test $200.00" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift SemiBold"/>
+        <Label x:Name="AccountMontlyPaymentLabel" Content="Total Minimum Payment" HorizontalAlignment="Left" Margin="626,280,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AccountMontlyPaymentTextBox" HorizontalAlignment="Left" Margin="636,311,0,0" TextWrapping="Wrap" Text="Test $200.00" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift SemiBold"/>
     </Grid>
 </Window>

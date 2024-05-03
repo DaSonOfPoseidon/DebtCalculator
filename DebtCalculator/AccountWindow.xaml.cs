@@ -22,7 +22,7 @@ namespace DebtCalculator
         DebtManager manager = ((App)Application.Current).Manager;
         public AccountWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             FillInfo();
         }
 
@@ -47,9 +47,21 @@ namespace DebtCalculator
                 total += item.MonthlyInterest;
             }
 
-            totalInterestTextBox.Text = total.ToString("F2");
+            totalInterestTextBox.Text = total.ToString("C");
+            MinimumPaymentTextBox.Text = manager.MinimumPayment.ToString("C");
         }
 
+        private void accountListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int indexS = accountListBox.SelectedIndex;
+            Debt temp = manager.DebtList[indexS];
+
+            AccountMonthlyInterestLabel.Content = $"{temp.Name}'s Interest";
+            AccountMontlyPaymentLabel.Content = $"{temp.Name}'s Payment";
+
+            AccountMonthlyInterestTextBox.Text = temp.MonthlyInterest.ToString("C");
+            AccountMontlyPaymentTextBox.Text = temp.MinimumMonthlyPayment.ToString("C");
+        }
 
     }
 }

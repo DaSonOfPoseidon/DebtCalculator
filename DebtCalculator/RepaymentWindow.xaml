@@ -10,5 +10,9 @@
         Title="RepaymentWindow" Height="450" Width="800">
     <Grid Background="Beige">
         <controls:Header x:Name="Header" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="684,313,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="paymentTextBox" HorizontalAlignment="Left" Margin="644,275,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="TotalDebtLabel" Content="Label" HorizontalAlignment="Left" Margin="634,191,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="MinimumPaymentLabel" Content="Label" HorizontalAlignment="Left" Margin="634,146,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

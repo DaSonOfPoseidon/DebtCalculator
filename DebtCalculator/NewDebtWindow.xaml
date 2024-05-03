@@ -13,15 +13,26 @@
             <ColumnDefinition Width="800*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <controls:Header x:Name="Header" VerticalAlignment="Top" Height="450"/>
-        <TextBox x:Name="nameTextBox" HorizontalAlignment="Center" Margin="0,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
-        <TextBox x:Name="amountTextBox" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
-        <TextBox x:Name="APRTextBox" HorizontalAlignment="Center" Margin="0,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Total Amount Owed" HorizontalAlignment="Left" Margin="333,187,0,0" VerticalAlignment="Top"/>
-        <Label Content="APR" HorizontalAlignment="Left" Margin="333,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.133,0.415"/>
-        <Label Content="Select An Account Type" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.265,0.608"/>
-        <Label Content="Account Name" HorizontalAlignment="Left" Margin="333,133,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="debtTypeComboBox" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="134" Height="18"/>
-        <Button x:Name="addDebtButton" Content="Enter Info" HorizontalAlignment="Left" Margin="631,295,0,0" VerticalAlignment="Top" Height="40" Width="73" Click="addDebtButton_Click"/>
+        <controls:Header x:Name="Header" VerticalAlignment="Top" Height="450" HorizontalAlignment="Center" Width="800"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="256,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="24"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Margin="408,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" TextChanged="amountTextBox_TextChanged" Height="24"/>
+        <TextBox x:Name="APRTextBox" HorizontalAlignment="Left" Margin="256,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="24"/>
+        <Label Content="Total Amount Owed" HorizontalAlignment="Left" Margin="417,132,0,0" VerticalAlignment="Top"/>
+        <Label Content="APR" HorizontalAlignment="Left" Margin="307,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.133,0.415"/>
+        <Label Content="Select An Account Type" HorizontalAlignment="Center" Margin="0,244,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.265,0.608"/>
+        <Label Content="Account Name" HorizontalAlignment="Left" Margin="279,132,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="debtTypeComboBox" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Width="130" Height="24">
+            <ComboBoxItem Content="Credit Card"/>
+            <ComboBoxItem Content="Student Debt"/>
+            <ComboBoxItem Content="Medical Debt"/>
+            <ComboBoxItem Content="Mortgage"/>
+            <ComboBoxItem Content="Personal Loan"/>
+            <ComboBoxItem Content="Car Loan"/>
+            <ComboBoxItem Content="Payment Plan"/>
+        </ComboBox>
+        <Button x:Name="addDebtButton" Content="Enter Info" Margin="0,316,0,0" Click="addDebtButton_Click" HorizontalAlignment="Center" Width="200" VerticalAlignment="Top" Height="44"/>
+        <TextBox x:Name="LoanLengthTextBox" HorizontalAlignment="Left" Margin="408,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="24"/>
+        <Label Content="Loan Duration (Months)" HorizontalAlignment="Left" Margin="407,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.133,0.415" ToolTip="Only needed for loans. (Ie Mortages, Car Loans, etc)" />
+        <TextBlock HorizontalAlignment="Center" Height="19" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="347" FontWeight="Bold"><Run Text="Please enter the required information for the new account. "/><LineBreak/><Run/></TextBlock>
     </Grid>
 </Window>

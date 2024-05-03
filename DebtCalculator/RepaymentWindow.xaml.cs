@@ -23,6 +23,14 @@ namespace DebtCalculator
         public RepaymentWindow()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        void LoadData()
+        {
+            MinimumPaymentLabel.Content = manager.MinimumPayment.ToString("C");
+            TotalDebtLabel.Content = manager.TotalDebt.ToString("C");
+            //
         }
     }
 }

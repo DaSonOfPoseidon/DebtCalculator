@@ -10,5 +10,6 @@
 
     <Grid Background="Beige">
         <controls:Header x:Name="Header" VerticalAlignment="Top"/>
+        <Label Content="Welcome Back!" HorizontalAlignment="Center" VerticalAlignment="Top" Height="122" Width="352" FontSize="48" FontWeight="Bold" Margin="0,168,0,0"/>
     </Grid>
 </Window>

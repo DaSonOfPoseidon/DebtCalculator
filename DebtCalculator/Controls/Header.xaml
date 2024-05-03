@@ -34,29 +34,26 @@
                 ElementName=MenuControl, 
                 Mode=TwoWay
                 }"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" Margin="28,0,27,0" RenderTransformOrigin="-0.215,0.52" 
          />
         <custom:HamburgerMenu x:Name="MenuControl" Grid.Column="0" Grid.Row="1">
             <custom:HamburgerMenu.Content>
                 <StackPanel>
-                    <Button Content="Home" Click="Home_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left"/>
-                    <Button Content="Add New Debt" Click="NewDebt_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left"/>
-                    <Button Content="Manage Accounts" Click="ManageAccounts_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left"/>
-                    <Button Content="Repayment Options" Click="Repayment_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left"/>
+                    <Button Content="Home" Click="Home_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" Width="105"/>
+                    <Button Content="New Account" Click="NewDebt_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold" Width="105"/>
+                    <Button Content="Manage Accounts" Click="ManageAccounts_Click" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left" FontWeight="Bold"/>
+                    <Button Content="Repayment" Click="Repayment_Click" BorderBrush="Transparent" Background="Transparent" FontWeight="Bold"/>
                 </StackPanel>
             </custom:HamburgerMenu.Content>
         </custom:HamburgerMenu>
         <Label 
             x:Name="AppNameLabel"
             Grid.Column="1" 
-            Content="Jack Of All Debt" 
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Width="auto"
+            Content="Jack Of All Debt"
+            VerticalAlignment="Center"
             HorizontalContentAlignment="Center" 
             FontSize="24" 
-            FontWeight="Bold"/>
+            FontWeight="Bold" HorizontalAlignment="Center" Width="192" Margin="-105,0,0,0"/>
 
         <Button
             x:Name="ProfileButton"
