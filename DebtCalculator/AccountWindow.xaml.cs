@@ -54,14 +54,18 @@ namespace DebtCalculator
         private void accountListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int indexS = accountListBox.SelectedIndex;
-            Debt temp = manager.DebtList[indexS];
+            if (indexS != -1)
+            {
+                Debt temp = manager.DebtList[indexS];
 
-            AccountMonthlyInterestLabel.Content = $"{temp.Name}'s Interest";
-            AccountMontlyPaymentLabel.Content = $"{temp.Name}'s Payment";
+                AccountMonthlyInterestLabel.Content = $"{temp.Name}'s Interest";
+                AccountMontlyPaymentLabel.Content = $"{temp.Name}'s Payment";
 
-            AccountMonthlyInterestTextBox.Text = temp.MonthlyInterest.ToString("C");
-            AccountMontlyPaymentTextBox.Text = temp.MinimumMonthlyPayment.ToString("C");
+                AccountMonthlyInterestTextBox.Text = temp.MonthlyInterest.ToString("C");
+                AccountMontlyPaymentTextBox.Text = temp.MinimumMonthlyPayment.ToString("C");
+            }
         }
+
 
     }
 }

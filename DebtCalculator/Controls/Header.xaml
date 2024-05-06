@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
 
-        <Border Grid.ColumnSpan="3" Background="LightGray" />
+        <Border Grid.ColumnSpan="3" Background="#FF496594" />
 
 
 
@@ -54,20 +54,5 @@
             HorizontalContentAlignment="Center" 
             FontSize="24" 
             FontWeight="Bold" HorizontalAlignment="Center" Width="192" Margin="-105,0,0,0"/>
-
-        <Button
-            x:Name="ProfileButton"
-            BorderBrush="Transparent"
-            Background="Transparent"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Profile"
-            Click="Profile_Click" 
-            Grid.Column="1"
-            Width="50"
-            Height="50" />
-
-        <Ellipse HorizontalAlignment="Right" Height="49" Stroke="Black" VerticalAlignment="Center" Width="49" Grid.Column="1"/>
-
     </Grid>
 </UserControl>

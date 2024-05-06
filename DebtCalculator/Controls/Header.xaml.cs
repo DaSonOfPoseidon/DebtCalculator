@@ -51,13 +51,6 @@ namespace DebtCalculator.Controls
             CloseAllOtherWindows(temp);
         }
 
-        private void Profile_Click(object sender, RoutedEventArgs e)
-        {
-            ProfileWindow temp = new();
-            temp.Show();
-            CloseAllOtherWindows(temp);
-        }
-
         private void Repayment_Click(object sender, RoutedEventArgs e)
         {
             RepaymentWindow temp = new();

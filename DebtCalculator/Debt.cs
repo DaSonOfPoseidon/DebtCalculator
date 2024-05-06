@@ -85,7 +85,7 @@ namespace DebtCalculator
             {
                 if (debtType < 3) { return MonthlyInterest + (Amount * 0.02); }
                 else { return GetMinPayment(); }
-            } //CC, not loans, update accordingly
+            }
         }
 
         public override string ToString()
@@ -117,7 +117,7 @@ namespace DebtCalculator
             }
         }
 
-        private int PayoffTime()
+        private int PayoffTime() //minimum payoff time.
         {
             int count = 0;
             double tempAmt = Amount;
